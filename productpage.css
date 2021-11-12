@@ -1,0 +1,379 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px dotted; */
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* vvvv-----------------  DESKTOP NAVBAR SILFEN -----------------------vvvv */
+.desktopnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  z-index: 2;
+}
+.desktopnav ul {
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  justify-content: space-evenly;
+  align-self: center;
+}
+
+ul li {
+  list-style: none;
+}
+li a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+li a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+.desktopnav li:hover {
+  scale: 1.1;
+}
+.desktopnav li:hover {
+  scale: 1.1;
+}
+.icons {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  grid-column: 3;
+}
+#basket,
+#heart,
+#search,
+#login {
+  margin-right: 1.8vw;
+}
+.logo {
+  justify-self: center;
+  grid-column: 2;
+}
+.logo img {
+  height: 24px;
+  margin-top: 1.3vw;
+  margin-bottom: 1.3vw;
+}
+#basket {
+  height: 18px;
+  width: 18px;
+  margin-right: 3vw;
+}
+
+#search {
+  height: 18px;
+  width: 18px;
+}
+#login {
+  height: 18px;
+  width: 18px;
+}
+
+#heart {
+  height: 18px;
+  width: 18px;
+}
+.shipping {
+  display: flex;
+  justify-content: end;
+  height: 100%;
+  align-items: center;
+  color: white;
+  font-size: 0.7rem;
+  margin-right: 3vw;
+}
+/* vvvv-----------------  MOBILE NAVBAR SILFEN -----------------------vvvv */
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  display: block;
+}
+.side-nav ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vw;
+  display: none;
+}
+.side-nav ul li {
+  border-bottom: 1px rgba(44, 37, 41, 0.14) solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#side-menu a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+.lesserthansign {
+  padding-right: 5vw;
+}
+.lesserthansign2 {
+  padding-right: 5vw;
+}
+.lesserthansign3 {
+  padding-right: 5vw;
+}
+.lesserthansign4 {
+  padding-right: 5vw;
+}
+.lesserthansign:hover {
+  cursor: pointer;
+}
+
+#nav-svg {
+  display: none;
+}
+.width {
+  width: 100%;
+}
+.heighLi {
+  padding-bottom: 30vw;
+  transition: 0.5s;
+}
+
+li a:hover {
+  scale: 1.1;
+}
+/*------------------TEXT CARUSEL----------------------------------- */
+.bluebar {
+  height: 34px;
+  background-color: #85b4d7;
+  padding-left: 2vw;
+  position: relative;
+  z-index: 2;
+}
+
+.textcarusel {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.rotatingText-adjective1 {
+  position: absolute;
+  left: 0.2;
+  top: 20%;
+  text-align: center;
+  opacity: 0;
+  color: white;
+  font-size: 0.8rem;
+}
+.rotatingText-adjective2 {
+  position: absolute;
+  left: 0.2;
+  top: 20%;
+  text-align: center;
+  opacity: 0;
+  color: white;
+  font-size: 0.8rem;
+}
+.rotatingText-adjective3 {
+  position: absolute;
+  left: 0.2;
+  top: 20%;
+  text-align: center;
+  opacity: 0;
+  color: white;
+  font-size: 0.8rem;
+}
+.rotatingText-adjective4 {
+  position: absolute;
+  left: 0.2;
+  top: 20%;
+  text-align: center;
+  opacity: 0;
+  color: white;
+  font-size: 0.8rem;
+}
+
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+
+  20%,
+  80% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+}
+.rot1 {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+}
+
+.rot2 {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-delay: 4.25s;
+}
+
+.rot3 {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-delay: 8s;
+}
+.rot4 {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-delay: 11.75s;
+}
+
+@media (max-width: 1100px) {
+  .desktopnav ul {
+    display: none;
+  }
+  #nav-svg {
+    display: flex;
+  }
+  #nav-svg svg {
+    width: 46px;
+    height: 46px;
+  }
+  .side-nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+    display: block;
+  }
+}
+/* ---------------------Main--------------------------- */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-top: 10vw;
+  margin-right: 10vw;
+}
+
+/* -----------------------info-------------------------------- */
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.colorimg img {
+  height: 90px;
+}
+.cart {
+  display: flex;
+}
+.add {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid #d6d6d6;
+  margin-right: 0.5vw;
+}
+
+.button button {
+  width: 220px;
+  height: 37px;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+.addp1 {
+  padding: 0 1vw 0 0.5vw;
+}
+.addp2 {
+  padding: 0 0.5vw 0 1vw;
+}
+.wishlist {
+  display: flex;
+  margin-top: 1vw;
+}
+#wishilisthearty {
+  height: 18px;
+  width: 18px;
+  margin-right: 0.5vw;
+}
+.productinfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vw;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+.delivery {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d6d6d6;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  margin-bottom: 5vw;
+}
+
+/* ----------------Gallery--------------------------- */
+
+.product-small-img img {
+  height: 92px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: block;
+  opacity: 0.6;
+}
+.product-small-img img:hover {
+  opacity: 1;
+}
+.product-small-img {
+  align-self: center;
+}
+.product {
+  display: flex;
+  justify-content: center;
+}
+
+.img-container img {
+  height: 500px;
+}
+
+.img-container {
+  float: right;
+  padding: 10px;
+}
+
+footer {
+  height: 200px;
+  background-color: #8fb3d4;
+}
