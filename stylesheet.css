@@ -290,7 +290,7 @@ li a:hover {
 .introduction {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 10vw 18vw;
+  /* grid-template-rows: 10vw 18vw; */
 }
 
 .newyear {
@@ -315,10 +315,7 @@ li a:hover {
 .productlistgrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-  margin-top: 60px;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin: 60px 5vw 0 5vw;
+  margin: 5vw 5vw 0 5vw;
   row-gap: 3em;
   column-gap: 1.5em;
 }
@@ -381,27 +378,31 @@ li a:hover {
 } */
 /* ----------------Footer--------------------------------- */
 footer {
-  height: 500px;
+  height: 250px;
   background-color: #8fb3d4;
 }
 /* ----------------MEDIA QUERIES----------------------------- */
-
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .desktopnav ul {
     display: none;
   }
   #nav-svg {
     display: flex;
   }
-
   #nav-svg svg {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
   }
   .side-nav ul {
     display: flex;
     flex-direction: column;
     margin-top: 4vw;
     display: block;
+  }
+}
+@media (max-width: 900px) {
+  .productlistgrid {
+    margin: 10vw 5vw 0 5vw;
+    grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
   }
 }
