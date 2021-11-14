@@ -101,7 +101,7 @@
       </ul>
     </nav>
     <main>
-      <div class="product">
+      <div class="firstgrid">
         <div class="product-small-img">
           <img
             class="img1"
@@ -116,64 +116,135 @@
             onclick="myFunction(this)"
           />
         </div>
-        <div class="img-container">
-          <img
-            id="imageBox"
-            src="/assets/618c1de99402c24f0000c642.png"
-            alt=""
-          />
+        <div class="product">
+          <div class="img-container">
+            <img
+              id="imageBox"
+              src="/assets/618c1de99402c24f0000c642.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="info">
+          <p>NEW</p>
+          <h2 class="productname">Shoulder Bag Yvonne</h2>
+          <p class="price">DKK 499,00</p>
+          <p class="description">
+            The THORA bag is a beautiful bag by SILFEN with corner details and
+            piping for a more sophisticated look. Made in glossy vegan leather
+            with silver metal hardware. The single handle is adjustable and make
+            the bag perfect for shoulder bag use. THORA comes with matching
+            lining and two internal pockets. Elevate your game with this bag!
+          </p>
+
+          <p class="strap">Strap: Adjustable shoulder strap</p>
+
+          <h4>Color</h4>
+          <div class="colorimg">
+            <img src="/assets/618c1de99402c24f0000c642.png" alt="" />
+          </div>
+          <div class="cart">
+            <div class="add">
+              <p class="addp1">-</p>
+              <p>1</p>
+              <p class="addp2">+</p>
+            </div>
+            <div class="button">
+              <button>Add to cart</button>
+            </div>
+          </div>
+          <div class="wishlist">
+            <img
+              id="wishilisthearty"
+              src="https://silfenstudio.com/wp-content/themes/nyla/files/assets/heart.svg"
+              alt=""
+            />
+            <p>Add to wishlist</p>
+          </div>
+
+          <div class="productinfo">
+            <p>Product info</p>
+            <span>+</span>
+          </div>
+          <div class="delivery">
+            <p>Delivery & Returns</p>
+            <span>+</span>
+          </div>
         </div>
       </div>
 
-      <div class="info">
-        <p>NEW</p>
-        <h2 class="productname">Shoulder Bag Yvonne</h2>
-        <p class="price">DKK 499,00</p>
-        <p class="descriptio">
-          The THORA bag is a beautiful bag by SILFEN with corner details and
-          piping for a more sophisticated look. Made in glossy vegan leather
-          with silver metal hardware. The single handle is adjustable and make
-          the bag perfect for shoulder bag use. THORA comes with matching lining
-          and two internal pockets. Elevate your game with this bag!
-        </p>
-
-        <p class="strap">Strap: Adjustable shoulder strap</p>
-
-        <h4>Color</h4>
-        <div class="colorimg">
-          <img src="/assets/618c1de99402c24f0000c642.png" alt="" />
-        </div>
-        <div class="cart">
-          <div class="add">
-            <p class="addp1">-</p>
-            <p>1</p>
-            <p class="addp2">+</p>
+      <div class="relatedproducts">
+        <div class="productlist">
+          <div class="itemimg">
+            <span class="new">NEW</span>
+            <a href="#">
+              <img
+                src="/assets/yvonneorange.svg"
+                alt="orange bag called Yvonne"
+            /></a>
           </div>
-          <div class="button">
-            <button>Add to cart</button>
+
+          <div class="iteminfo">
+            <div class="hovermenu"></div>
+            <span class="itemname">Shoulder Bag Yvonne</span>
+            <span class="itemprice">399,-</span>
+            <span class="colors">+ More colors</span>
           </div>
         </div>
-        <div class="wishlist">
-          <img
-            id="wishilisthearty"
-            src="https://silfenstudio.com/wp-content/themes/nyla/files/assets/heart.svg"
-            alt=""
-          />
-          <p>Add to wishlist</p>
-        </div>
+        <div class="productlist">
+          <div class="itemimg">
+            <span class="new">NEW</span>
+            <a href="#">
+              <img
+                src="/assets/ulrikke_dark_blue.svg"
+                alt="orange bag called Yvonne"
+            /></a>
+          </div>
 
-        <div class="productinfo">
-          <p>Product info</p>
-          <span>+</span>
+          <div class="iteminfo">
+            <div class="hovermenu"></div>
+            <span class="itemname">Crossbody Bag Ulrikke</span>
+            <span class="itemprice">499,-</span>
+            <span class="colors">+ More colors</span>
+          </div>
         </div>
-        <div class="delivery">
-          <p>Delivery & Returns</p>
-          <span>+</span>
+        <div class="productlist">
+          <div class="itemimg">
+            <span class="new">NEW</span>
+            <a href="#">
+              <img
+                src="/assets/thora_whilte.svg"
+                alt="orange bag called Yvonne"
+            /></a>
+          </div>
+
+          <div class="iteminfo">
+            <div class="hovermenu"></div>
+            <span class="itemname">Shoulder Bag Thora</span>
+            <span class="itemprice">499,-</span>
+            <span class="colors">+ More colors</span>
+          </div>
+        </div>
+        <div class="productlist">
+          <div class="itemimg">
+            <span class="new">NEW</span>
+            <a href="#">
+              <img src="/assets/pipi_green.svg" alt="orange bag called Yvonne"
+            /></a>
+          </div>
+
+          <div class="iteminfo">
+            <div class="hovermenu"></div>
+            <span class="itemname">Shoulder Bag Yvonne</span>
+            <span class="itemprice">399,-</span>
+            <span class="colors">+ More colors</span>
+          </div>
         </div>
       </div>
     </main>
     <footer></footer>
-
+    <script src="/productpage.js"></script>
     <script>
       function myFunction(smallImg) {
         var fullImg = document.querySelector("#imageBox");

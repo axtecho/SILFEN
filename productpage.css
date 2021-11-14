@@ -165,6 +165,7 @@ li a:visited {
 li a:hover {
   scale: 1.1;
 }
+
 /*------------------TEXT CARUSEL----------------------------------- */
 .bluebar {
   height: 34px;
@@ -257,32 +258,20 @@ li a:hover {
   animation-delay: 11.75s;
 }
 
-@media (max-width: 1100px) {
-  .desktopnav ul {
-    display: none;
-  }
-  #nav-svg {
-    display: flex;
-  }
-  #nav-svg svg {
-    width: 46px;
-    height: 46px;
-  }
-  .side-nav ul {
-    display: flex;
-    flex-direction: column;
-    margin-top: 4vw;
-    display: block;
-  }
-}
 /* ---------------------Main--------------------------- */
-main {
+/* main {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding-top: 10vw;
+  padding-top: 5vw;
   margin-right: 10vw;
+} */
+/* --------------------------firstgrid------------------------- */
+.firstgrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding-top: 5vw;
+  margin: 0 10vw 3vw 0;
 }
-
 /* -----------------------info-------------------------------- */
 
 .info {
@@ -329,7 +318,7 @@ main {
 .productinfo {
   display: flex;
   justify-content: space-between;
-  margin-top: 5vw;
+  margin-top: 3vw;
   border-top: 1px solid #d6d6d6;
   border-bottom: 1px solid #d6d6d6;
   padding-top: 1vw;
@@ -343,29 +332,114 @@ main {
   padding-bottom: 1vw;
   margin-bottom: 5vw;
 }
+.info :first-child {
+  margin-bottom: 0.5vw;
+}
+.productname {
+  font-weight: 300;
+}
+.description {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  color: #7d7d7d;
+}
+.strap {
+  margin-bottom: 2vw;
+  color: #7d7d7d;
+}
+.colorimg {
+  margin-bottom: 2vw;
+}
+.info :first-child,
+.productname,
+.description {
+  font-family: roboto, Verdana sans-serif;
+}
+.price,
+.strap {
+  font-family: Helvetica, Verdana sans-serif;
+}
+.info h4 {
+  font-family: manrope, Verdana sans-serif;
+}
+
+/* ------------------------relatedproducts-------------------- */
+.relatedproducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5vw;
+  margin: 0 3vw 9vw 3vw;
+}
+
+.productlist img {
+  width: 100%;
+  background-color: #f2f2f2;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.251);
+  transition: transform 0.1s;
+}
+.productlist img:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.251);
+}
+.itemimg {
+  position: relative;
+}
+.new {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-family: roboto, Verdana sans-serif;
+}
+.iteminfo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  word-wrap: break-word;
+  flex-direction: column;
+}
+.itemname {
+  font-family: roboto, Verdana sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.itemname,
+.itemprice {
+  padding-bottom: 0.1vw;
+}
+.itemprice,
+.colors {
+  font-size: 1rem;
+}
 
 /* ----------------Gallery--------------------------- */
 
 .product-small-img img {
-  height: 92px;
+  width: 100%;
   margin: 10px 0;
   cursor: pointer;
   display: block;
   opacity: 0.6;
+  padding: 0 2vw 0 2vw;
 }
 .product-small-img img:hover {
   opacity: 1;
 }
 .product-small-img {
   align-self: center;
+  margin-bottom: 15vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 6vw;
 }
 .product {
   display: flex;
   justify-content: center;
+  margin: 0 6vw 0 6vw;
 }
 
 .img-container img {
-  height: 500px;
+  width: 100%;
 }
 
 .img-container {
@@ -376,4 +450,68 @@ main {
 footer {
   height: 200px;
   background-color: #8fb3d4;
+}
+@media (max-width: 1100px) {
+  .desktopnav ul {
+    display: none;
+  }
+  #nav-svg {
+    display: flex;
+  }
+  #nav-svg svg {
+    width: 46px;
+    height: 46px;
+  }
+  .side-nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .firstgrid {
+    grid-template-columns: 1fr;
+    margin: 0 2vw 3vw 2vw;
+  }
+
+  .product-small-img {
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
+    padding: 0 25vw 0 25vw;
+  }
+  .product {
+    grid-row: 1;
+    padding: 0 15vw 0 15vw;
+  }
+  .info {
+    margin: 0 2vw 0 2vw;
+  }
+
+  .description {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+  }
+  .strap {
+    margin-bottom: 4vw;
+  }
+  .colorimg {
+    margin-bottom: 4vw;
+  }
+  .productinfo {
+    margin-top: 6vw;
+  }
+  .delivery {
+    margin-bottom: 10vw;
+  }
+  .relatedproducts {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4.5vw;
+  }
+  .itemprice,
+  .colors {
+    font-size: 0.8rem;
+  }
 }
