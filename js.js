@@ -23,23 +23,29 @@ function endof() {
 /* --------------- COLLAPSED SIDE BAR ------------------- */
 
 document.querySelector("#open").addEventListener("click", openSideMenu);
-let flag;
+var flag;
+var flagStart;
+var tl = gsap.timeline();
 
 function openSideMenu() {
   document.querySelector(".side-nav").classList.toggle("width");
-  var tl = gsap.timeline();
 
+  if (!flagStart) {
+    // alert("ehy");
+    flag2 = 1;
+    tl.to("rect.one", { duration: 0.35, rotation: 42 });
+    tl.to("rect.two", { duration: 0.75, opacity: 0 }, "<");
+    tl.to("rect.three", { duration: 0.35, rotation: -42 }, "<");
+  }
   if (flag) {
     flag = 0;
-    /* tl.reverse(); */
-    tl.to("rect.one", { opacity: 1, duration: 0.35, rotation: 0 });
-    tl.to("rect.two", { opacity: 1, duration: 0.7 }, "<");
-    tl.to("rect.three", { opacity: 1, duration: 0.35, rotation: 0 }, "<");
+    tl.reverse();
+    // tl.to("rect.one", { opacity: 1, duration: 0.35, rotation: 0 });
+    // tl.to("rect.two", { opacity: 1, duration: 0.7 }, "<");
+    // tl.to("rect.three", { opacity: 1, duration: 0.35, rotation: 0 }, "<");
   } else {
     flag = 1;
-    tl.to("rect.one", { duration: 0.35, rotation: 42 });
-    tl.to("rect.two", { opacity: 0, duration: 0.7 }, "<");
-    tl.to("rect.three", { duration: 0.35, rotation: -42 }, "<");
+    tl.play();
   }
 }
 

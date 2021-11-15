@@ -29,3 +29,49 @@ function openSideMenu() {
     tl.to("rect.three", { duration: 0.35, rotation: -42 }, "<");
   }
 }
+
+/* -----------------FETCHING DATA---------------------- */
+const url = "https://silfen-3aa2.restdb.io/rest/silfen-prom";
+
+const options = {
+  headers: {
+    "x-apikey": "3f2da07bd3b34d860de5cdb1de1696dbab906",
+  },
+};
+
+fetch(url, options)
+  .then((response) => {
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    return response.json();
+  })
+
+  .then((data) => {
+    handleData(data);
+  })
+
+  .catch((e) => {
+    console.error("An error occured:", e.message);
+  });
+
+function handleData(bag) {
+  console.log(bag);
+  bag.forEach(artpiece);
+}
+
+function artpiece(pieceofart) {
+  const template = document.querySelector("#ourtemplate").content;
+
+  const copy = template.cloneNode(true);
+  copy
+    .querySelector(".artlist a")
+    .setAttribute("href", "artpiece.html?id=" + pieceofart._id);
+  copy.querySelector(".artistname").textContent = pieceofart.artist;
+  copy.querySelector(".artname").textContent = pieceofart.titel;
+  copy.querySelector("img").src = pieceofart.img_url;
+
+  const parent = document.querySelector(".grid");
+
+  parent.appendChild(copy);
+}
