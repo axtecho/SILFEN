@@ -97,7 +97,7 @@ function onebag(item) {
   const copy = template.cloneNode(true);
   copy
     .querySelector(".itemimg a")
-    .setAttribute("href", "artpiece.html?id=" + item._id);
+    .setAttribute("href", "productpage.html?id=" + item._id);
   copy.querySelector(".itemname").textContent = item.title;
   copy.querySelector(".itemprice").textContent = item.price;
   copy.querySelector("img").src = item.primary_image_url;

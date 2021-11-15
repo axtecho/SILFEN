@@ -39,11 +39,13 @@ function changeImage(e) {
 }
 
 /* -----------------FETCHING DATA---------------------- */
-const url = "https://silfen-3aa2.restdb.io/rest/silfen-prom";
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+const url = "https://silfen-3aa2.restdb.io/rest/silfen-prom/" + id;
 
 const options = {
   headers: {
-    "x-apikey": "3f2da07bd3b34d860de5cdb1de1696dbab906",
+    "x-apikey": "61925035fc71545b0f5e0810",
   },
 };
 
@@ -62,24 +64,19 @@ fetch(url, options)
   .catch((e) => {
     console.error("An error occured:", e.message);
   });
-
 function handleData(bag) {
   console.log(bag);
-  bag.forEach(artpiece);
-}
+  console.log("pieceofart");
 
-function artpiece(pieceofart) {
-  const template = document.querySelector("#ourtemplate").content;
-
-  const copy = template.cloneNode(true);
-  copy
-    .querySelector(".artlist a")
-    .setAttribute("href", "artpiece.html?id=" + pieceofart._id);
-  copy.querySelector(".artistname").textContent = pieceofart.artist;
-  copy.querySelector(".artname").textContent = pieceofart.titel;
-  copy.querySelector("img").src = pieceofart.img_url;
-
-  const parent = document.querySelector(".grid");
-
-  parent.appendChild(copy);
+  document.querySelector(".product-small-img .img1").src =
+    bag.primary_image_url;
+  document.querySelector(".product-small-img .img2").src =
+    bag.secondary_image_url;
+  document.querySelector(".product img").src = bag.primary_image_url;
+  document.querySelector(".productname").textContent = bag.title;
+  document.querySelector(".description").textContent = bag.description;
+  document.querySelector(".strap").textContent = bag.strap;
+  document.querySelector(".colorimg img").src = bag.primary_image_url;
+  document.querySelector(".arttype").textContent = bag.arttype;
+  document.querySelector(".dimensions").textContent = bag.dimensions;
 }
