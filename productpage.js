@@ -29,6 +29,14 @@ function openSideMenu() {
     tl.to("rect.three", { duration: 0.35, rotation: -42 }, "<");
   }
 }
+/* -------------------- GALLERY ---------------------------- */
+document.querySelector(".img1").addEventListener("click", changeImage);
+document.querySelector(".img2").addEventListener("click", changeImage);
+
+function changeImage(e) {
+  var fullImg = document.querySelector("#imageBox");
+  fullImg.src = this.src;
+}
 
 /* -----------------FETCHING DATA---------------------- */
 const url = "https://silfen-3aa2.restdb.io/rest/silfen-prom";
