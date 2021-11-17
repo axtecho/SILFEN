@@ -93,6 +93,9 @@ li a:visited {
   font-size: 0.7rem;
   margin-right: 3vw;
 }
+.currentpage {
+  font-weight: bold;
+}
 /* vvvv-----------------  MOBILE NAVBAR SILFEN -----------------------vvvv */
 
 .side-nav {
@@ -399,10 +402,35 @@ footer {
     margin-top: 4vw;
     display: block;
   }
+  .introduction p {
+    font-size: 1rem;
+    padding: 0 15vw 0 15vw;
+  }
 }
 @media (max-width: 900px) {
   .productlistgrid {
     margin: 10vw 5vw 0 5vw;
     grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
+  }
+  .newyear {
+    width: 60vw;
+    margin-bottom: 6vw;
+  }
+  .introduction p {
+    font-size: 1rem;
+    padding: 0 15vw 0 15vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .newyear {
+    width: 80vw;
+  }
+  .introduction p {
+    font-size: 1rem;
+    padding: 0 5vw 0 5vw;
+  }
+  .icons {
+    display: none;
   }
 }

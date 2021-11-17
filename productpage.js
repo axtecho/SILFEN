@@ -79,4 +79,5 @@ function handleData(bag) {
   document.querySelector(".colorimg img").src = bag.primary_image_url;
   document.querySelector(".arttype").textContent = bag.arttype;
   document.querySelector(".dimensions").textContent = bag.dimensions;
+  document.querySelector("document.title").textContent = bag.title;
 }

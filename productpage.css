@@ -430,7 +430,7 @@ li a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 6vw;
+  padding: 0 0 0 8vw;
 }
 .product {
   display: flex;
@@ -468,6 +468,11 @@ footer {
     margin-top: 4vw;
     display: block;
   }
+  .product-small-img {
+    align-self: flex-start;
+
+    margin-top: 5vw;
+  }
 }
 
 @media (max-width: 900px) {
@@ -477,9 +482,9 @@ footer {
   }
 
   .product-small-img {
-    padding: 0;
-    margin: 0;
-    flex-direction: row;
+    margin-top: 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 0 25vw 0 25vw;
   }
   .product {
@@ -513,5 +518,11 @@ footer {
   .itemprice,
   .colors {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .icons {
+    display: none;
   }
 }

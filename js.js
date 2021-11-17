@@ -40,26 +40,12 @@ function openSideMenu() {
   if (flag) {
     flag = 0;
     tl.reverse();
-    // tl.to("rect.one", { opacity: 1, duration: 0.35, rotation: 0 });
-    // tl.to("rect.two", { opacity: 1, duration: 0.7 }, "<");
-    // tl.to("rect.three", { opacity: 1, duration: 0.35, rotation: 0 }, "<");
   } else {
     flag = 1;
     tl.play();
   }
 }
 
-/* document.querySelector(".lesserthansign").addEventListener("click", foldout);
-
-function foldout() {
-  document.querySelector(".shopLi").classList.toggle("heighLi");
-}
-
-document
-  .querySelector(".productlist")
-  .addEventListener("mouseover", menuexpand);
-
-function menuexpand() {} */
 /* -----------------FETCHING DATA---------------------- */
 const url = "https://silfen-3aa2.restdb.io/rest/silfen-prom";
 
